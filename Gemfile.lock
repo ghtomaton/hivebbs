@@ -1,0 +1,36 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    bcrypt (3.1.15)
+    erubis (2.7.0)
+    escape_utils (1.2.1)
+    hive_markup (0.0.2)
+    mustermann (1.1.1)
+      ruby2_keywords (~> 0.0.1)
+    rack (2.2.3)
+    rack-protection (2.0.8.1)
+      rack
+    rake (13.0.1)
+    ruby2_keywords (0.0.2)
+    sequel (5.36.0)
+    sinatra (2.0.8.1)
+      mustermann (~> 1.0)
+      rack (~> 2.0)
+      rack-protection (= 2.0.8.1)
+      tilt (~> 2.0)
+    tilt (2.0.10)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bcrypt
+  erubis
+  escape_utils
+  hive_markup
+  rake
+  sequel
+  sinatra
+
+BUNDLED WITH
+   1.17.2
