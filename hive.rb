@@ -49,7 +49,12 @@ class BBS < Sinatra::Base
     File.open("#{settings.root}/i18n/#{CONFIG[:locale]}.rb", 'r') { |f| f.read }
   )
   
-  TRIP_KEY = File.binread("#{settings.root}/config/trip.key")
+  TRIP_KEY = if (base64key = ENV['TRIP_KEY'])
+               require 'base64'
+               Base64.decode64(ENV['TRIP_KEY'])
+             else
+               File.binread("#{settings.root}/config/trip.key")
+             end
   
   LOGGER = Logger.new("#{settings.root}/log/error.log", 524288)
   
