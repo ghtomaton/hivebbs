@@ -7,3 +7,5 @@ gem 'escape_utils'
 gem 'sinatra'
 gem 'sequel'
 gem 'hive_markup'
+gem 'pg'
+
