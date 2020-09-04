@@ -439,11 +439,9 @@ class BBS < Sinatra::Base
         
         files_dest_dir = "#{settings.files_dir}/#{board[:id]}/#{thread[:id]}"
         
-        if is_new_thread
-          FileUtils.mkdir(files_dest_dir)
-        end
-        
         if has_file
+          FileUtils.mkdir_p(files_dest_dir)
+
           dest_file = "#{files_dest_dir}/#{file_hash}.#{file_meta[:ext]}"
           
           FileUtils.mv(
